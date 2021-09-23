@@ -10,7 +10,6 @@ function reloadTemplate(){
   defTop.outerHTML = wet.builder.appTop({
     appName: [
       {
-        href: "https://github.com/deepwaterpaladin/security-application",
         text: (switchLanguage === 'en' ? "Évaluation de l'incidence algorithmique" : 'Security Impact Assessment')
       }
     ],
