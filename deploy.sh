@@ -17,5 +17,3 @@
     git push -f git@github.com:deepwaterpaladin/deepwaterpaladin.github.io.git main
 
     cd -
-
-#
