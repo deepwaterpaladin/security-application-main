@@ -4,7 +4,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deepwaterpaladin/security-application"
+    "url": "https://github.com/deepwaterpaladin/security-application-main"
   },
   "scripts": {
     "deploy": "npm run build; push-dir --dir=dist --branch=github-pages --cleanup",
@@ -24,15 +24,15 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.18.0",
     "i18n": "^0.13.3",
-    "jest": "^27.0.6",
+    "jest": "^27.2.1",
     "lodash.isempty": "^4.4.0",
     "register-service-worker": "^1.7.2",
     "showdown": "^1.9.1",
-    "survey-core": "^1.8.55",
-    "survey-vue": "^1.8.55",
+    "survey-core": "^1.8.68",
+    "survey-vue": "^1.8.68",
     "vue": "^2.6.14",
     "vue-class-component": "^7.2.6",
-    "vue-i18n": "^8.26.0",
+    "vue-i18n": "^8.26.1",
     "vue-property-decorator": "^8.5.1",
     "vue-router": "^3.5.2",
     "vue-search-select": "^2.9.4",
@@ -54,7 +54,7 @@
     "@vue/test-utils": "1.2.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
-    "cspell": "^5.6.0",
+    "cspell": "^5.10.1",
     "cspell-dict-fr-fr": "^1.3.1",
     "eslint": "^5.16.0",
     "eslint-plugin-security": "^1.4.0",
@@ -63,7 +63,7 @@
     "markdownlint-cli": "^0.27.1",
     "push-dir": "^0.4.1",
     "ts-jest": "^26.5.6",
-    "typescript": "^4.3.5",
+    "typescript": "^4.4.3",
     "vue-template-compiler": "^2.6.14"
   }
 }
