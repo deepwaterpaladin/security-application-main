@@ -14,6 +14,6 @@
     git commit -m 'deploy'
 
     # if you are deploying to https://<USERNAME>.github.io
-    git push -f git@github.com:deepwaterpaladin/deepwaterpaladin.github.io.git main
+    git push -f git@github.com/deepwaterpaladin/security-application-main.git master:github-pages
 
     cd -
