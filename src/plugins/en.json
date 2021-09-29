@@ -184,18 +184,6 @@
                 }]
             },
             {
-                "title": "Contingency Planning",
-                "elements": [{
-                    "text": "None"
-                }, {
-                    "text": "None"
-                }, {
-                    "text": "Ensure that contingency plans and/or backup systems are available should the Automated Decision System be unavailable."
-                }, {
-                    "text": "Ensure that contingency plans and/or backup systems are available should the Automated Decision System be unavailable."
-                }]
-            },
-            {
                 "title": "Approval for the system to operate",
                 "elements": [{
                     "text": "None"
