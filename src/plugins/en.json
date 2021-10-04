@@ -20,6 +20,7 @@
     "linkProjectText": "Link to GitHub project repository",
     "linkProjectAnchor": "https://github.com/deepwaterpaladin/security-application-main",
     "linkDirective": "http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32592",
+    "exportControlInfo":"https://www.publicsafety.gc.ca/cnt/rsrcs/pblctns/2018-strngthnng-cntr-prlfrtn-frmwrk/index-en.aspx?wbdisable=true",
     "print": "Print",
     "projectDetails":"Project Details",
     "riskAssessment": "Risk Assessment",
@@ -136,19 +137,19 @@
                 }]
             },
             {
-                "title": "ATIP Review",
+                "title": "Privacy Act",
                 "elements": [{
-                    "text": "None"
+                    "text": "According to your response, your project is in line with the Privacy Act."
                 }, {
-                    "text": "Plain language notice posted through all service delivery channels in use (Internet, in person, mail or telephone)."
+                    "text": "According to your response, your project is potentially in violation with the Privacy Act. Click here to review the Privacy Act (insert href here)"
                 }, {
-                    "text": "Plain language notice through all service delivery channels in use (Internet, in person, mail or telephone). In addition, publish documentation on relevant websites about the automated decision system, in plain language, describing:\n\nHow the components work;\nHow it supports the administrative decision; and\nResults of any reviews or audits; and\nA description of the training data, or a link to the anonymized training data if this data is publicly available."
+                    "text": "According to your response, your project is handling personally identifiable information incorrectly. To review proper da"
                 }, {
                     "text": "Plain language notice through all service delivery channels in use (Internet, in person, mail or telephone). In addition, publish documentation on relevant websites about the automated decision system, in plain language, describing:\n\nHow the components work;\nHow it supports the administrative decision; and\nResults of any reviews or audits; and\nA description of the training data, or a link to the anonymized training data if this data is publicly available."
                 }]
             },
             {
-                "title": "Human-in-the-loop for decisions",
+                "title": "Outside Organizations",
                 "elements": [{
                     "text": "Decisions may be rendered without direct human involvement."
                 }, {
@@ -181,18 +182,6 @@
                     "text": "Documentation on the design and functionality of the system.\n\nTraining courses must be completed."
                 }, {
                     "text": "Documentation on the design and functionality of the system.\n\nRe-occurring training courses.\n\nA means to verify that training has been completed."
-                }]
-            },
-            {
-                "title": "Approval for the system to operate",
-                "elements": [{
-                    "text": "None"
-                }, {
-                    "text": "None"
-                }, {
-                    "text": "Deputy Head"
-                }, {
-                    "text": "Treasury Board"
                 }]
             }
         ]

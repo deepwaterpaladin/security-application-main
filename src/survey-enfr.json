@@ -754,6 +754,7 @@
          {
           "type": "text",
           "name": "projectDetailsTitle",
+          "description":"Please provide a description brief description of project.",
           "title": {
            "default": "Project Summary",
            "fr": "Titre du projet"
@@ -763,7 +764,7 @@
             "type": "text",
             "name": "projectLocation",
             "title": "Where does your project take place?",
-            "isRequired": true
+            "description":"i.e. Ottawa, ON"
          },
          {
           "type": "radiogroup",
@@ -866,18 +867,23 @@
          {
           "value": "item5-1",
           "text": "Public consultation"
+         },
+         {
+            "value": "item6-0",
+            "text": "None of the above"
          }
         ],
-        "hasOther": true,
+        "hasOther": false,
         "noneText": "Non-profit"
        },
        {
         "type": "comment",
         "name": "question2-NS",
         "visible": false,
-        "visibleIf": "{domesticActors-RS} anyof ['item1-2', 'item2-2', 'item3-2', 'item4-2', 'item5']",
+        "visibleIf": "{domesticActors-RS} anyof ['item1-2', 'item2-2', 'item3-2', 'item4-2', 'item5-1']",
         "title": "Describe",
-        "requiredIf": "{domesticActors-RS} anyof ['item5-2', 'item4-2', 'item3-2', 'item2-2', 'item1-2']"
+        "description": "Please provide the name of the organization",
+        "requiredIf": "{domesticActors-RS} anyof ['item5-1', 'item4-2', 'item3-2', 'item2-2', 'item1-2']"
        },
        {
         "type": "radiogroup",
@@ -903,9 +909,13 @@
          {
           "value": "item4-4",
           "text": "Public consultation"
+         },
+         {
+            "value": "item6-0",
+            "text": "None of the above"
          }
         ],
-        "hasOther": true
+        "hasOther": false
        },
        {
         "type": "comment",
@@ -913,12 +923,14 @@
         "visible": false,
         "visibleIf": "{intlActors-RS} anyof ['item1-4', 'item2-4', 'item3-4', 'item5-4', 'item4-4']",
         "title": "Describe",
+        "description": "Please provide the name of the organization",
         "requiredIf": "{intlActors-RS} anyof ['item1-4', 'item2-4', 'item3-4', 'item5-4', 'item4-4']"
        },
        {
         "type": "radiogroup",
         "name": "privacyActPrimer-RS",
         "title": "Does your project involve providing any of the following services:",
+        "description":"Your answer to this question will help assess the privacy implications of your project.",
         "isRequired": true,
         "choices": [
          {
@@ -993,6 +1005,7 @@
           "name": "question4-RS",
           "visibleIf": "{question22-RS} = 'item1-3'",
           "title": "Was this information shared with any organization outside of your own?",
+          "description":"This includes other federal departments, universities, consultants, and/or external stakeholders.",
           "choices": [
            {
             "value": "item1-3",
@@ -1009,6 +1022,7 @@
           "name": "question16-RS",
           "visibleIf": "{question4-RS} = 'item1-3'",
           "title": "Do individuals outside of your organization still have access to this information?",
+          "description":"This includes other federal departments, universities, consultants, and/or external stakeholders.",
           "choices": [
            {
             "value": "item1-2",
@@ -1043,7 +1057,7 @@
       ],
       "title": {
        "default": "Personal Information",
-       "fr": "Profil de risque"
+       "fr": ""
       }
      },
      {
@@ -1052,11 +1066,13 @@
        {
         "type": "checkbox",
         "name": "protectedABC-RS",
-        "title": "Did you work with any protected information at the following classification levels:",
+        "title": "Did you work with any PROTECTED information at the following classification levels:",
+        "description": "The government of Canada defines Protected information as: Applies to information or assets that, if compromised, could <strong> reasonably be expected to cause injury </strong> to a <strong> non-national interest—</strong>that is, an individual interest such as a person or an organization.",
         "choices": [
          {
           "value": "item1-2",
-          "text": "Protected A"
+          "text": "Protected A",
+          "description": "Applies to information or assets that, if compromised, could cause injury to an individual, organization or government."
          },
          {
           "value": "item2-3",
@@ -1071,7 +1087,8 @@
        {
         "type": "checkbox",
         "name": "classifiedMaterials-RS",
-        "title": "Did you work with any Classified information at the following classification levels",
+        "title": "Did you work with any CLASSIFIED information at the following classification levels",
+        "description": "The government of Canada defines Classified information as: information or assets that, if compromised, could <strong>reasonably be expected to cause injury</strong> to the <strong>national interest</strong>, defence and maintenance of the social, political and economic stability of Canada.",
         "choices": [
          {
           "value": "item1-4",
@@ -1112,6 +1129,7 @@
        {
         "type": "panel",
         "name": "dualUseApplications-RS",
+        "description": "Dual use applications are defined as <i>Goods and technology that are capable of, or designed for use in, peaceful and legitimate civilian or commercial purposes, but which also have potential applicability in such activities as enhancing the capabilities of foreign adversaries, including their space capabilities, in relation to the development or enhancement of weapons programs</i>.",
         "elements": [
          {
           "type": "checkbox",
@@ -1175,6 +1193,25 @@
             "text": "Robotics & Autonomous Systems"
            }
           ]
+         },
+         {
+            "type":"radiogroup",
+            "name":"exportingDualUse",
+            "title":"Did your project involve exporting the item selected above?",
+            "visible":false,
+            "visibleIf": "{dualUseApplications-RS} anyof ['item1-2', 'item2-2', 'item3-2', 'item4-2','item5-2','item6-2','item7-2','item8-2','item9-2','item10-2','item11-2','item12-2']",
+            "requiredIf": "{dualUseApplications-RS} anyof ['item1-2', 'item2-2', 'item3-2', 'item4-2','item5-2','item6-2','item7-2','item8-2','item9-2','item10-2','item11-2','item12-2']",
+            "description":"",
+            "choices":[
+               {
+               "value": "item1-1",
+               "text": "Yes"
+               },
+               {
+               "value": "item2-0",
+               "text": "No"
+               }
+            ]
          },
          {
           "type": "radiogroup",
@@ -1250,14 +1287,9 @@
         ]
        },
        {
-        "type": "html",
-        "name": "question2",
-        "html": "<button onClick=AlertPopUp>more info</button>"
-       },
-       {
         "type": "checkbox",
         "name": "question3",
-        "title": "Does your project involve research/collarboration with any of the following institutions?",
+        "title": "Does your project involve research/collaboration with any of the following institutions?",
         "choices": [
          {
           "value": "item1-1",

@@ -181,27 +181,20 @@ function calculateFinalScore(
     }
   });
 
-  //maxMitigationScore is divided by 2 because of Design/Implementation fork
-  if (mitigationScore >= percentage * (maxMitigationScore / 2)) {
-    total = Math.round((1 - deduction) * rawRiskScore);
-  } else {
-    total = rawRiskScore;
+  if (mitigationScore >= rawRiskScore) {
+    total = rawRiskScore - mitigationScore;
+  } else if (mitigationScore <= rawRiskScore) {
+    total = rawRiskScore - mitigationScore;
   }
 
-  if (total <= maxRawRiskScore * threshold1) {
-    level = 1;
-  } else if (
-    total > maxRawRiskScore * threshold1 &&
-    total <= maxRawRiskScore * threshold2
-  ) {
-    level = 2;
-  } else if (
-    total > maxRawRiskScore * threshold2 &&
-    total <= maxRawRiskScore * threshold3
-  ) {
-    level = 3;
-  } else {
+  if (total >= 12) {
     level = 4;
+  } else if (total >= 9) {
+    level = 3;
+  } else if (total >= 6) {
+    level = 2;
+  } else {
+    level = 1;
   }
 
   return [rawRiskScore, mitigationScore, total, level];

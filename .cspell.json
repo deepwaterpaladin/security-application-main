@@ -7,6 +7,7 @@
     "alphagov",
     "Analyzing",
     "anonymized",
+    "anyof",
     "ATIP",
     "behaviors",
     "bttm",
@@ -56,5 +57,8 @@
     "softwareterms",
     "html",
     "css"
+  ],
+  "ignoreWords": [
+    "bootstrapmaterial"
   ]
 }
